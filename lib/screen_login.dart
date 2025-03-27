@@ -42,8 +42,10 @@ class _ScreenLoginState extends State<ScreenLogin> {
 
   void login() {
     if (tcUserName.text == 'username' && tcPassword.text == 'password') {
+      FocusManager.instance.primaryFocus?.unfocus();
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const ScreenHome()));
     } else {
+      FocusManager.instance.primaryFocus?.unfocus();
       showDialog(
         context: context,
         builder: (context) {
